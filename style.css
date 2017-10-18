@@ -1,0 +1,31 @@
+.main-container div {
+  margin: 5px;
+}
+
+.result-container div {
+  overflow-y: scroll;
+  height: 355px;
+  padding: 1px;
+  color: #E9ECEF
+}
+
+body {
+  padding-top: 50px;
+}
+
+.rad {
+  border-radius: 7px;
+}
+
+.alert {
+  display: none;
+}
+.item-list{
+  background: rgb(13, 18, 20);
+}
+h2{
+  color: white;
+}
+.fix-height{
+	height:615px;
+}

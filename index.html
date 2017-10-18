@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" crossorigin="anonymous">
+  <Title>Project</Title>
+</head>
+<body>
+  <div class="container">
+    <!-- Carousel -->
+    <div id="carouselExampleControls" data-interval="false" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <!--here is Stack-->
+          <div class="jumbotron fix-height mr-5 ml-5 bg-dark">
+            <div class="row">
+              <div class="col ml-3">
+                <div class="container ml-5">
+                  <h1 class="header"><span class="badge-dark rad bg-dark pl-3 pr-3">Stack</span></h1>
+                  <input type="text" class="form-control  w-50 mb-2" autocomplete="off" placeholder="Input a value" id="stack-value">
+                  <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Push" id="stack-push" onclick="stkPush()">
+                  <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Pop" id="stack-pop" onclick="stkPop()">
+                  <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Peek" id="stack-front" onclick="stkPeek()">
+                  <!-- <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Back" id="stack-back" onclick="stkBack()"> -->
+                  <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Count" id="stack-count" onclick="stkCount()">
+                  <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="IsEmpty" id="stack-isEmpty" onclick="stkIsEmpty()">
+                  <input class="btn btn-outline-info form-control w-50" type="submit" value="Find" id="stack-Find" onclick="stkFind()">
+                </div>
+              </div>
+              <div class="col mr-5">
+                <div class="container">
+                  <h2>Item(s) in Stack</h2>
+                  <div class="result-container">
+                    <div class="jumbotron item-list" id="stacked">
+                    </div>
+                  </div>
+                  <div class="alert" id="stack-alert" role="alert">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--here is Stack-->
+        </div>
+        <div class="carousel-item">
+          <!--Here is Queue-->
+          <div class="jumbotron fix-height mr-5 ml-5  bg-dark ">
+            <div class="row">
+              <div class="col ml-3">
+                <div class="container ml-5">
+                  <h1 class="header">
+                    <span class="badge-dark rad bg-dark pl-3 pr-3">Queue</span>
+                  </h1>
+                  <div class="form-group" action="#">
+                    <input type="text" class="form-control w-50 mb-2" placeholder="Input a value" autocomplete="off" id="queue-value">
+                    <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Queue" onclick="QuePush()">
+                    <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Dequeue" onclick="QuePop()">
+                    <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Front" id="stack-front" onclick="queFront()">
+                    <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Rear" id="stack-back" onclick="queBack()">
+                    <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Count" id="stack-count" onclick="queCount()">
+                    <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="IsEmpty" id="stack-isEmpty" onclick="queIsEmpty()">
+                    <input class="btn btn-outline-info form-control w-50" type="submit" value="Find" id="que-Find" onclick="queFind()">
+                  </div>
+                </div>
+              </div>
+              <div class="col mr-5">
+                <div class="container">
+                  <h2>Item(s) in Queue</h2>
+                  <div class="result-container">
+                    <div class="jumbotron  item-list" id="queued">
+                    </div>
+                  </div>
+                  <div class="alert" id="queue-alert" role="alert">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Here is Queue-->
+        </div>
+        <div class="carousel-item">
+          <!--Here is Link List-->
+          <div class="jumbotron fix-height mr-5 ml-5  bg-dark ">
+            <div class="row">
+              <div class="col ml-3">
+                <div class="container ml-5">
+                  <h1 class="header"><span class="badge-dark rad bg-dark pl-3 pr-3">Link List</span></h1>
+                  <div class="form-group">
+                    <!--Insert-->
+                    <input type="text" class="form-control w-50 mb-2" autocomplete="off" placeholder="Input a value" id="linklist-value">
+                    <input class="btn btn-outline-info form-control w-50 mb-2" type="submit" value="Insert" onclick="listpush()">
+                    <!--Insert Index At-->
+                    <div class="btn-group mb-2 w-50" role="group">
+                      <div class="btn-group btn-group-vertical" role="group">
+                        <input type="text" class="form-control mb-2 w-100" autocomplete="off" placeholder="Index" id="linklist-index-value">
+                        <input type="text" class="form-contro w-100" autocomplete="off" placeholder="Value" id="linklist-value-at">
+                      </div>
+                      <input class="btn btn-outline-info form-control" type="submit" value="InsertAt" onclick="insertIndexAt()">
+                    </div>
+                    <!--Remove-->
+                    <div class="btn-group mb-2 w-50" role="group">
+                      <div class="btn-group btn-group-inline" role="group">
+                      <input type="text" class="form-control w-50" autocomplete="off" placeholder="Value" id="linklist-remove">
+                      <input class="btn btn-outline-info form-control" type="submit" value="Remove" onclick="remove()">
+                    </div>
+                    </div>
+                    <!--Find-->
+                    <div class="btn-group mb-2 w-50">
+                    <div class="btn-group form-inline" role="group">
+                      <input type="text" class="form-control w-50" autocomplete="off" placeholder="Value" id="linklist-find">
+                      <input class="btn btn-outline-info form-control w-50" type="submit" value="Find" onclick="find()">
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col mr-5">
+                <div class="container">
+                  <h2>Item(s) in Linked List</h2>
+                  <div class="result-container">
+                    <div class="jumbotron  item-list" id="linkedList">
+                    </div>
+                  </div>
+                  <div class="alert" id="link-alert" role="alert">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Here is Link List-->
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- Carousel -->
+  </div>
+</body>
+<script src="bootstrap/js/jquery-3.2.1.slim.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="Stack.js"></script>
+<script src="Queue.js"></script>
+<script src="linkedlist.js"></script>
+</html>
